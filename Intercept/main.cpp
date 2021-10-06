@@ -70,6 +70,7 @@ void UnInstallRegistryHook()
 void InstallRegistryHook()
 {
 	NTSTATUS	ntstatus;
+
 	ntstatus = CmRegisterCallback(RegistryIntercept, NULL, &stCookie);
 
 	if (NT_SUCCESS(ntstatus))
